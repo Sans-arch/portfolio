@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import GithubIcon from '../components/icons/Github.astro';
+import LinkedinIcon from '../components/icons/Linkedin.astro';
+import MailIcon from '../components/icons/Mail.astro';
+import SocialPill from '../components/SocialPill.astro';
+---
+
+<Layout 
+	title="Portfolio de Santiago - Desenvolvedor e Programador Web." 
+	description="Contrate o Santiago para criar a sua aplicação web ou mobile. Desenvolvedor Web e Programador. Especialista em criar aplicações únicas"
+>
+	<main>
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<img 
+        		class="rounded-full size-12 mb-4" 
+				src="https://media.licdn.com/dms/image/D4D03AQGGvnZcxeQpQw/profile-displayphoto-shrink_800_800/0/1678201358479?e=1718841600&v=beta&t=V7L7dzW5WqH1uTIt29bqiErN-A1NAMrz3noJfbACyxA" 
+       			alt="santiago photo" 
+   	 		/>
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-2 pb-10">
+				Olá, sou o Santiago 
+				<a
+					href="https://www.linkedin.com/in/santiago-negreira/" 
+					target="_blank" 
+					rel="noopener" 
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar</Badge>
+				</a> 
+			</h1>
+			<h2 class="text-2xl text-wrap">
+				<span>+3 anos de experiência.</span>
+				<span class="text-yellow-200/90">Desenvolvedor web e Engenheiro de Software.</span>
+				<span class="text-green-300/90">De Joinville, Brasil.</span>
+				<span class="opacity-85">Especialista em criar aplicações únicas.</span>
+			</h2>
+
+			<nav class="flex gap-x-4 mt-8">
+				<SocialPill href="https://www.linkedin.com/in/santiago-negreira/">
+					<LinkedinIcon class="size-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/Sans-arch">
+					<GithubIcon class="size-6" />
+					Github
+				</SocialPill>
+				<SocialPill href="https://github.com/Sans-arch">
+					<MailIcon class="size-6" />
+					sansanfleitas@gmail.com
+				</SocialPill>
+			</nav>
+		</section>
+	</main>
+</Layout>
