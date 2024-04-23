@@ -10,6 +10,8 @@ import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
+
+import profilePic from "../assets/profile.jpeg";
 ---
 
 <Layout
@@ -18,11 +20,7 @@ import Projects from "../components/Projects.astro";
 >
   <main class="px-4">
     <SectionContainer class="py-44 pb-32">
-      <img
-        class="rounded-full size-12 mb-4"
-        src="https://media.licdn.com/dms/image/D4D03AQGGvnZcxeQpQw/profile-displayphoto-shrink_800_800/0/1678201358479?e=1718841600&v=beta&t=V7L7dzW5WqH1uTIt29bqiErN-A1NAMrz3noJfbACyxA"
-        alt="santiago photo"
-      />
+      <img class="rounded-full size-16 mb-4" src={profilePic.src} alt="santiago photo" />
       <h1 class="text-white text-3l md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
         Olá, sou o Santiago
         <a
@@ -65,7 +63,7 @@ import Projects from "../components/Projects.astro";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="experience">
+    <SectionContainer id="projects">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <CodeIcon class="size-7" />
         Projetos
