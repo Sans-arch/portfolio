@@ -1,17 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import GithubIcon from "../components/icons/Github.astro";
-import LinkedinIcon from "../components/icons/Linkedin.astro";
-import MailIcon from "../components/icons/Mail.astro";
-import BriefcaseIcon from "../components/icons/Briefcase.astro";
-import SocialPill from "../components/SocialPill.astro";
-import Experience from "../components/Experience.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import CodeIcon from "../components/icons/Code.astro";
-import Projects from "../components/Projects.astro";
+import Layout from "@/layouts/Layout.astro";
+
+import AboutMe from "@/components/AboutMe.astro";
+import Badge from "@/components/Badge.astro";
+import BriefcaseIcon from "@/components/icons/Briefcase.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import Experience from "@/components/Experience.astro";
+import GithubIcon from "@/components/icons/Github.astro";
+import LinkedinIcon from "@/components/icons/Linkedin.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import ProfileIcon from "@/components/icons/Profile.astro";
+import Projects from "@/components/Projects.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import SocialPill from "@/components/SocialPill.astro";
 
 import profilePic from "../assets/profile.jpeg";
+
+const showWorkBadge = false;
 ---
 
 <Layout
@@ -27,9 +32,9 @@ import profilePic from "../assets/profile.jpeg";
           href="https://www.linkedin.com/in/santiago-negreira/"
           target="_blank"
           rel="noopener"
-          class="flex justify-center items-center"
+          class="flex justify-center items-center hover:scale-105"
         >
-          <Badge>Disponível para trabalhar</Badge>
+          {showWorkBadge && <Badge>Disponível para trabalhar</Badge>}
         </a>
       </h1>
       <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
@@ -69,6 +74,14 @@ import profilePic from "../assets/profile.jpeg";
         Projetos
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="about">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ProfileIcon class="size-7" />
+        Sobre mim
+      </h2>
+      <AboutMe />
     </SectionContainer>
   </main>
 </Layout>
