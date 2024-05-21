@@ -2,6 +2,8 @@
 import NextJsIcon from "./icons/NextJs.astro";
 import TailwindIcon from "./icons/Tailwind.astro";
 import ReactIcon from "./icons/React.astro";
+import SpringIcon from "./icons/Spring.astro";
+import JavaIcon from "./icons/Java.astro";
 import Project from "./Project.astro";
 
 const TAGS = {
@@ -20,6 +22,16 @@ const TAGS = {
     class: "bg-black text-white",
     icon: ReactIcon,
   },
+  SPRING: {
+    name: "Spring",
+    class: "bg-black text-white",
+    icon: SpringIcon,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-black text-white",
+    icon: JavaIcon,
+  },
 };
 
 const PROJECTS = [
@@ -31,11 +43,21 @@ const PROJECTS = [
     github: "https://github.com/Sans-arch/desafio-01-praticando-conceitos-reactjs",
     tags: [TAGS.REACT],
   },
+  {
+    title: "URL Shortener",
+    description: "Um projeto de um encurtador de links feito com Spring Boot.",
+    image:
+      "https://private-user-images.githubusercontent.com/69471715/332595540-8447b71d-3939-40fc-aca1-45987879d72b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTYzMjk5NDksIm5iZiI6MTcxNjMyOTY0OSwicGF0aCI6Ii82OTQ3MTcxNS8zMzI1OTU1NDAtODQ0N2I3MWQtMzkzOS00MGZjLWFjYTEtNDU5ODc4NzlkNzJiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MjElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTIxVDIyMTQwOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQzYmUzOGVhNjNlMmYwMTQ1Y2E2Yzg2NmNhYzhhMzU0MDAxN2JhOGJjZWJmNjc1ZTViMmEwZjJlMWFhNTQxOWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.222mn_qOnz2cIh5Q1j47U5l9Kq4WldtRxNeWQ-9A1VI",
+    github: "https://github.com/Sans-arch/url-shortener",
+    tags: [TAGS.JAVA, TAGS.SPRING],
+  },
 ];
 ---
 
-{
-  PROJECTS.map(({ title, description, tags, image, link, github }) => (
-    <Project data={{ title, description, tags, image, link, github }} />
-  ))
-}
+<div class="flex flex-col gap-10">
+  {
+    PROJECTS.map(({ title, description, tags, image, link, github }) => (
+      <Project data={{ title, description, tags, image, link, github }} />
+    ))
+  }
+</div>
